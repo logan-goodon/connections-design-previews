@@ -1,0 +1,7 @@
+.first-color-chart{display:grid;gap:10px}
+.first-color-row{display:grid;grid-template-columns:54px minmax(0,1fr) 52px;align-items:center;gap:10px;font-size:14px}
+.first-color-row>span{color:var(--muted)}
+.first-color-track{height:10px;border-radius:3px;overflow:hidden;background:#ffffff0d}
+.first-color-track i{display:block;height:100%;border-radius:inherit}
+.first-color-row strong{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.first-color-note{color:var(--muted);font-size:12px;line-height:1.45;margin:10px 0 0}
