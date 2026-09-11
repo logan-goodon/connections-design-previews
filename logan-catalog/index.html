@@ -1037,7 +1037,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;body&gt;
 &lt;div id=&quot;logan-catalog-flow&quot;&gt;
   &lt;style&gt;
-    #logan-catalog-flow { display:grid; place-items:center; padding:8px 0; color:light-dark(#172019,#f1f5f2); font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,sans-serif; }
+    #logan-catalog-flow { display:grid; place-items:center; gap:10px; padding:8px 0; color:light-dark(#172019,#f1f5f2); font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,sans-serif; }
     #logan-catalog-flow * { box-sizing:border-box; }
     #logan-catalog-flow .lc-phone { width:min(100%,390px); min-height:700px; background:light-dark(#f7f8f4,#111512); border:1px solid light-dark(#d9ded8,#343b36); border-radius:28px; overflow:hidden; box-shadow:0 18px 45px light-dark(#1c281b20,#00000055); display:flex; flex-direction:column; }
     #logan-catalog-flow .lc-top { padding:18px 20px 12px; display:flex; align-items:center; justify-content:space-between; }
@@ -1079,9 +1079,31 @@ html&gt;body{padding:0}&lt;/style&gt;
     #logan-catalog-flow .lc-nav.is-active { color:light-dark(#285c32,#a7d4ac); }
     #logan-catalog-flow .lc-nav i { width:21px; height:21px; }
     #logan-catalog-flow .lc-back { border:0; padding:8px 0; background:transparent; color:light-dark(#49634e,#a9c8ad); cursor:pointer; display:flex; align-items:center; gap:6px; }
+    #logan-catalog-flow .lc-preview { width:min(100%,390px); display:flex; align-items:center; gap:9px; }
+    #logan-catalog-flow .lc-preview label { color:light-dark(#59645b,#adb8b0); font-size:12px; white-space:nowrap; }
+    #logan-catalog-flow .lc-preview select { flex:1; min-height:44px; padding:8px 36px 8px 12px; color:inherit; background:light-dark(#ffffff,#1a201b); border:1px solid light-dark(#d8ddd7,#374039); border-radius:12px; font:inherit; font-size:16px; }
+    #logan-catalog-flow .lc-field { margin:0 0 15px; }
+    #logan-catalog-flow .lc-field label { display:block; font-size:13px; color:light-dark(#59645b,#adb8b0); margin:0 0 6px; }
+    #logan-catalog-flow .lc-field input, #logan-catalog-flow .lc-field select, #logan-catalog-flow .lc-field textarea { width:100%; min-height:48px; border:1px solid light-dark(#d8ddd7,#374039); border-radius:13px; background:light-dark(#ffffff,#1a201b); color:inherit; padding:11px 12px; font:inherit; font-size:16px; }
+    #logan-catalog-flow .lc-field textarea { min-height:82px; resize:none; }
+    #logan-catalog-flow .lc-choice { padding:13px 14px; border:1px solid light-dark(#d8ddd7,#374039); border-radius:14px; background:light-dark(#ffffff,#1a201b); margin-bottom:10px; display:flex; gap:10px; align-items:flex-start; }
+    #logan-catalog-flow .lc-choice input { margin-top:4px; width:18px; height:18px; }
+    #logan-catalog-flow .lc-choice strong { font-weight:500; display:block; }
+    #logan-catalog-flow .lc-choice small { color:light-dark(#69736b,#a4aea6); display:block; margin-top:3px; line-height:1.35; }
+    #logan-catalog-flow .lc-persons { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:12px 0 16px; }
+    #logan-catalog-flow .lc-person { text-align:center; }
+    #logan-catalog-flow .lc-face { aspect-ratio:1; border-radius:14px; background:light-dark(#dce7d7,#283329); display:grid; place-items:center; margin-bottom:6px; }
+    #logan-catalog-flow .lc-person span { font-size:12px; }
+    #logan-catalog-flow .lc-detail-head { display:flex; gap:14px; align-items:center; margin:12px 0 18px; }
+    #logan-catalog-flow .lc-detail-head .lc-thumb { width:76px; height:76px; }
+    #logan-catalog-flow .lc-detail-head h2 { font-size:24px; margin:0 0 4px; }
+    #logan-catalog-flow .lc-detail-head small { color:light-dark(#69736b,#a4aea6); }
+    #logan-catalog-flow .lc-alert { margin:54px 0 20px; text-align:center; }
+    #logan-catalog-flow .lc-alert .lc-icon { margin:0 auto 15px; width:54px; height:54px; }
     @media (max-width:360px) { #logan-catalog-flow .lc-phone { border-radius:20px; } #logan-catalog-flow .lc-main { padding-inline:14px; } }
   &lt;/style&gt;
 
+  &lt;div class=&quot;lc-preview&quot;&gt;&lt;label for=&quot;lc-screen-picker&quot;&gt;Preview screen&lt;/label&gt;&lt;select id=&quot;lc-screen-picker&quot;&gt;&lt;option value=&quot;home&quot;&gt;Home&lt;/option&gt;&lt;option value=&quot;enroll&quot;&gt;Owner enrollment&lt;/option&gt;&lt;option value=&quot;object&quot;&gt;Voice intake&lt;/option&gt;&lt;option value=&quot;photo&quot;&gt;Add photo&lt;/option&gt;&lt;option value=&quot;analyzing&quot;&gt;Analyzing&lt;/option&gt;&lt;option value=&quot;review&quot;&gt;Review&lt;/option&gt;&lt;option value=&quot;edit&quot;&gt;Edit details&lt;/option&gt;&lt;option value=&quot;people&quot;&gt;Identify people&lt;/option&gt;&lt;option value=&quot;experience&quot;&gt;Link experience&lt;/option&gt;&lt;option value=&quot;saved&quot;&gt;Saved&lt;/option&gt;&lt;option value=&quot;library&quot;&gt;Library&lt;/option&gt;&lt;option value=&quot;detail&quot;&gt;Item detail&lt;/option&gt;&lt;option value=&quot;offline&quot;&gt;Offline&lt;/option&gt;&lt;option value=&quot;redirect&quot;&gt;Redirect&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
   &lt;section class=&quot;lc-phone&quot; aria-label=&quot;Logan Catalog mobile app mockup&quot;&gt;
     &lt;header class=&quot;lc-top&quot;&gt;&lt;div class=&quot;lc-brand&quot;&gt;Logan Catalog&lt;/div&gt;&lt;div class=&quot;lc-owner&quot;&gt;Owner · Logan&lt;/div&gt;&lt;/header&gt;
     &lt;main class=&quot;lc-main&quot;&gt;
@@ -1091,6 +1113,15 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;button class=&quot;lc-action&quot; type=&quot;button&quot; data-go=&quot;object&quot;&gt;&lt;span class=&quot;lc-icon&quot;&gt;&lt;i data-lucide=&quot;mic&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Tell me about an object&lt;/strong&gt;&lt;small&gt;A photo is optional&lt;/small&gt;&lt;/span&gt;&lt;/button&gt;
         &lt;button class=&quot;lc-action&quot; type=&quot;button&quot; data-go=&quot;photo&quot;&gt;&lt;span class=&quot;lc-icon&quot;&gt;&lt;i data-lucide=&quot;camera&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Add a photo&lt;/strong&gt;&lt;small&gt;Take one or choose from Photos&lt;/small&gt;&lt;/span&gt;&lt;/button&gt;
         &lt;button class=&quot;lc-action&quot; type=&quot;button&quot; data-go=&quot;library&quot;&gt;&lt;span class=&quot;lc-icon&quot;&gt;&lt;i data-lucide=&quot;library&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Open the library&lt;/strong&gt;&lt;small&gt;Browse objects, photos, and drafts&lt;/small&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;enroll&quot; hidden&gt;
+        &lt;h2&gt;Make this your device&lt;/h2&gt;
+        &lt;p&gt;Enter the one-time owner key to authorize this iPhone.&lt;/p&gt;
+        &lt;div class=&quot;lc-field&quot;&gt;&lt;label for=&quot;owner-key&quot;&gt;Owner enrollment key&lt;/label&gt;&lt;input id=&quot;owner-key&quot; type=&quot;password&quot; value=&quot;••••••••••••••••&quot; aria-label=&quot;Owner enrollment key&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;lc-field&quot;&gt;&lt;label for=&quot;device-name&quot;&gt;Device name&lt;/label&gt;&lt;input id=&quot;device-name&quot; value=&quot;Logan’s iPhone&quot;&gt;&lt;/div&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;home&quot;&gt;&lt;i data-lucide=&quot;shield-check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Authorize this device&lt;/button&gt;
+        &lt;div class=&quot;lc-note&quot;&gt;The enrollment key is exchanged for a revocable device session and is never stored on this phone.&lt;/div&gt;
       &lt;/section&gt;
 
       &lt;section class=&quot;lc-screen&quot; data-screen=&quot;object&quot; hidden&gt;
@@ -1130,7 +1161,42 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;/div&gt;
         &lt;div class=&quot;lc-note&quot;&gt;Location “garage” needs confirmation before it is linked.&lt;/div&gt;
         &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;saved&quot;&gt;&lt;i data-lucide=&quot;check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Confirm and save&lt;/button&gt;
-        &lt;button class=&quot;lc-action lc-secondary&quot; type=&quot;button&quot;&gt;Edit details&lt;/button&gt;
+        &lt;button class=&quot;lc-action lc-secondary&quot; type=&quot;button&quot; data-go=&quot;edit&quot;&gt;Edit details&lt;/button&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;edit&quot; hidden&gt;
+        &lt;button class=&quot;lc-back&quot; type=&quot;button&quot; data-go=&quot;review&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Review&lt;/button&gt;
+        &lt;h2&gt;Edit details&lt;/h2&gt;
+        &lt;p&gt;Correct the proposal before anything is sent to Logan Core.&lt;/p&gt;
+        &lt;div class=&quot;lc-field&quot;&gt;&lt;label for=&quot;object-name&quot;&gt;Name&lt;/label&gt;&lt;input id=&quot;object-name&quot; value=&quot;Lasko box fan&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;lc-field&quot;&gt;&lt;label for=&quot;object-type&quot;&gt;Type&lt;/label&gt;&lt;select id=&quot;object-type&quot;&gt;&lt;option&gt;Fan&lt;/option&gt;&lt;option&gt;Household appliance&lt;/option&gt;&lt;option&gt;Other physical object&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+        &lt;div class=&quot;lc-field&quot;&gt;&lt;label for=&quot;object-location&quot;&gt;Location&lt;/label&gt;&lt;input id=&quot;object-location&quot; value=&quot;Garage&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;lc-field&quot;&gt;&lt;label for=&quot;object-notes&quot;&gt;Your description&lt;/label&gt;&lt;textarea id=&quot;object-notes&quot;&gt;This is my white Lasko box fan. It stays in the garage.&lt;/textarea&gt;&lt;/div&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;review&quot;&gt;&lt;i data-lucide=&quot;check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Apply changes&lt;/button&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;people&quot; hidden&gt;
+        &lt;button class=&quot;lc-back&quot; type=&quot;button&quot; data-go=&quot;photo&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Photo&lt;/button&gt;
+        &lt;h2&gt;Who is pictured?&lt;/h2&gt;
+        &lt;p&gt;You said, “That’s Jen on the left and Michael in the middle.”&lt;/p&gt;
+        &lt;div class=&quot;lc-persons&quot;&gt;
+          &lt;div class=&quot;lc-person&quot;&gt;&lt;div class=&quot;lc-face&quot;&gt;&lt;i data-lucide=&quot;user&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;span&gt;Jen&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;lc-person&quot;&gt;&lt;div class=&quot;lc-face&quot;&gt;&lt;i data-lucide=&quot;user&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;span&gt;Michael&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;lc-person&quot;&gt;&lt;div class=&quot;lc-face&quot;&gt;&lt;i data-lucide=&quot;circle-help&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;span&gt;Unidentified&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;lc-note&quot;&gt;These links come from your statement. The app is not identifying faces biometrically.&lt;/div&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;experience&quot;&gt;Confirm people&lt;/button&gt;
+        &lt;button class=&quot;lc-action lc-secondary&quot; type=&quot;button&quot;&gt;Correct identification&lt;/button&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;experience&quot; hidden&gt;
+        &lt;button class=&quot;lc-back&quot; type=&quot;button&quot; data-go=&quot;people&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; People&lt;/button&gt;
+        &lt;h2&gt;Link an experience?&lt;/h2&gt;
+        &lt;p&gt;Life Archive found possible matches using your story, date, location, and participants.&lt;/p&gt;
+        &lt;label class=&quot;lc-choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;experience&quot; checked&gt;&lt;span&gt;&lt;strong&gt;Lake Pleasant weekend&lt;/strong&gt;&lt;small&gt;August 10–12, 2024 · Jen and Michael&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;
+        &lt;label class=&quot;lc-choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;experience&quot;&gt;&lt;span&gt;&lt;strong&gt;Create a new experience&lt;/strong&gt;&lt;small&gt;Use your narration as the starting recollection.&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;
+        &lt;label class=&quot;lc-choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;experience&quot;&gt;&lt;span&gt;&lt;strong&gt;No experience&lt;/strong&gt;&lt;small&gt;Preserve the photo without an experience link.&lt;/small&gt;&lt;/span&gt;&lt;/label&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; style=&quot;margin-top:18px&quot; type=&quot;button&quot; data-go=&quot;review&quot;&gt;Continue to review&lt;/button&gt;
       &lt;/section&gt;
 
       &lt;section class=&quot;lc-screen&quot; data-screen=&quot;saved&quot; hidden&gt;
@@ -1145,9 +1211,32 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;section class=&quot;lc-screen&quot; data-screen=&quot;library&quot; hidden&gt;
         &lt;h2&gt;Your library&lt;/h2&gt;
         &lt;p&gt;Objects, photos, and drafts awaiting review.&lt;/p&gt;
-        &lt;div class=&quot;lc-library-item&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;fan&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Lasko box fan&lt;/strong&gt;&lt;small&gt;Object · 1 photo&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;button class=&quot;lc-library-item&quot; style=&quot;width:100%;text-align:left;color:inherit&quot; type=&quot;button&quot; data-go=&quot;detail&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;fan&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Lasko box fan&lt;/strong&gt;&lt;small&gt;Object · 1 photo&lt;/small&gt;&lt;/div&gt;&lt;/button&gt;
         &lt;div class=&quot;lc-library-item&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;disc-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Back to the Future&lt;/strong&gt;&lt;small&gt;Blu-ray copy · Media Shelf&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;div class=&quot;lc-library-item&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;image&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Lake trip photo&lt;/strong&gt;&lt;small&gt;Jen and Michael · linked experience&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;detail&quot; hidden&gt;
+        &lt;button class=&quot;lc-back&quot; type=&quot;button&quot; data-go=&quot;library&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Library&lt;/button&gt;
+        &lt;div class=&quot;lc-detail-head&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;fan&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;h2&gt;Lasko box fan&lt;/h2&gt;&lt;small&gt;Physical object · Owned&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lc-list&quot;&gt;
+          &lt;div class=&quot;lc-row&quot;&gt;&lt;i data-lucide=&quot;tag&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;div&gt;&lt;span&gt;Classification&lt;/span&gt;&lt;small&gt;Fan · Household appliance&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;lc-row&quot;&gt;&lt;i data-lucide=&quot;map-pin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;div&gt;&lt;span&gt;Location&lt;/span&gt;&lt;small&gt;Garage · Confirmed by Logan&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;lc-row&quot;&gt;&lt;i data-lucide=&quot;image&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;div&gt;&lt;span&gt;Photos&lt;/span&gt;&lt;small&gt;1 verified original&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;photo&quot;&gt;&lt;i data-lucide=&quot;camera&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Add another photo&lt;/button&gt;
+        &lt;button class=&quot;lc-action lc-secondary&quot; type=&quot;button&quot; data-go=&quot;edit&quot;&gt;Edit object&lt;/button&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;offline&quot; hidden&gt;
+        &lt;div class=&quot;lc-alert&quot;&gt;&lt;span class=&quot;lc-icon&quot;&gt;&lt;i data-lucide=&quot;wifi-off&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;h2&gt;You’re offline&lt;/h2&gt;&lt;p&gt;Logan Catalog needs an internet connection to preserve and analyze your information.&lt;/p&gt;&lt;/div&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;home&quot;&gt;Try again&lt;/button&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;redirect&quot; hidden&gt;
+        &lt;div class=&quot;lc-alert&quot;&gt;&lt;span class=&quot;lc-icon&quot;&gt;&lt;i data-lucide=&quot;messages-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;h2&gt;Continue in Intake&lt;/h2&gt;&lt;p&gt;This app is for cataloging photos and physical possessions. Your request belongs in Logan Core Intake.&lt;/p&gt;&lt;/div&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot;&gt;Open Logan Core Intake&lt;/button&gt;
+        &lt;button class=&quot;lc-action lc-secondary&quot; type=&quot;button&quot; data-go=&quot;home&quot;&gt;Back to cataloging&lt;/button&gt;
       &lt;/section&gt;
     &lt;/main&gt;
     &lt;nav class=&quot;lc-bottom&quot; aria-label=&quot;App navigation&quot;&gt;
@@ -1159,12 +1248,15 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;script&gt;
     (() =&gt; {
       const root = document.getElementById(&#x27;logan-catalog-flow&#x27;);
+      const picker = root.querySelector(&#x27;#lc-screen-picker&#x27;);
       const show = name =&gt; {
         root.querySelectorAll(&#x27;.lc-screen&#x27;).forEach(el =&gt; { el.hidden = el.dataset.screen !== name; });
         root.querySelectorAll(&#x27;.lc-nav&#x27;).forEach(el =&gt; el.classList.toggle(&#x27;is-active&#x27;, (name === &#x27;library&#x27; ? &#x27;library&#x27; : name === &#x27;home&#x27; ? &#x27;home&#x27; : &#x27;photo&#x27;) === el.dataset.go));
+        picker.value = name;
         if (globalThis.lucide) lucide.createIcons({ attrs: { width: 18, height: 18 } });
       };
       root.querySelectorAll(&#x27;[data-go]&#x27;).forEach(button =&gt; button.addEventListener(&#x27;click&#x27;, () =&gt; show(button.dataset.go)));
+      picker.addEventListener(&#x27;change&#x27;, () =&gt; show(picker.value));
       if (globalThis.lucide) lucide.createIcons({ attrs: { width: 18, height: 18 } });
       const design = { corners: 16, compact: false };
       const phone = root.querySelector(&#x27;.lc-phone&#x27;);
