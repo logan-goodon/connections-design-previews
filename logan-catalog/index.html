@@ -1100,10 +1100,19 @@ html&gt;body{padding:0}&lt;/style&gt;
     #logan-catalog-flow .lc-detail-head small { color:light-dark(#69736b,#a4aea6); }
     #logan-catalog-flow .lc-alert { margin:54px 0 20px; text-align:center; }
     #logan-catalog-flow .lc-alert .lc-icon { margin:0 auto 15px; width:54px; height:54px; }
+    #logan-catalog-flow .lc-mic-ready { width:104px; height:104px; border-radius:52px; margin:28px auto 12px; border:0; background:light-dark(#285c32,#9ed2a4); color:light-dark(#ffffff,#102014); display:grid; place-items:center; cursor:pointer; }
+    #logan-catalog-flow .lc-mic-ready i { width:38px; height:38px; }
+    #logan-catalog-flow .lc-center-note { text-align:center; font-size:13px; color:light-dark(#69736b,#a4aea6); margin-bottom:26px; }
+    #logan-catalog-flow .lc-query { padding:14px; border-radius:14px; background:light-dark(#e8f0e6,#263229); color:light-dark(#285c32,#b7dcbc); line-height:1.4; margin:10px 0 16px; }
+    #logan-catalog-flow .lc-query small { display:block; color:light-dark(#59645b,#aab5ac); margin-bottom:4px; }
+    #logan-catalog-flow .lc-tabs { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; padding:4px; border-radius:13px; background:light-dark(#e8ebe7,#232923); margin-bottom:14px; }
+    #logan-catalog-flow .lc-tab { min-height:38px; border:0; border-radius:10px; background:transparent; color:light-dark(#657067,#a7b0a9); font-size:12px; cursor:pointer; }
+    #logan-catalog-flow .lc-tab.is-active { background:light-dark(#ffffff,#343c35); color:light-dark(#285c32,#b9ddbd); box-shadow:0 1px 3px light-dark(#17201918,#00000044); }
+    #logan-catalog-flow .lc-page-note { display:flex; justify-content:space-between; align-items:center; color:light-dark(#69736b,#a4aea6); font-size:12px; padding:5px 2px 0; }
     @media (max-width:360px) { #logan-catalog-flow .lc-phone { border-radius:20px; } #logan-catalog-flow .lc-main { padding-inline:14px; } }
   &lt;/style&gt;
 
-  &lt;div class=&quot;lc-preview&quot;&gt;&lt;label for=&quot;lc-screen-picker&quot;&gt;Preview screen&lt;/label&gt;&lt;select id=&quot;lc-screen-picker&quot;&gt;&lt;option value=&quot;home&quot;&gt;Home&lt;/option&gt;&lt;option value=&quot;enroll&quot;&gt;Owner enrollment&lt;/option&gt;&lt;option value=&quot;object&quot;&gt;Voice intake&lt;/option&gt;&lt;option value=&quot;photo&quot;&gt;Add photo&lt;/option&gt;&lt;option value=&quot;analyzing&quot;&gt;Analyzing&lt;/option&gt;&lt;option value=&quot;review&quot;&gt;Review&lt;/option&gt;&lt;option value=&quot;edit&quot;&gt;Edit details&lt;/option&gt;&lt;option value=&quot;people&quot;&gt;Identify people&lt;/option&gt;&lt;option value=&quot;experience&quot;&gt;Link experience&lt;/option&gt;&lt;option value=&quot;saved&quot;&gt;Saved&lt;/option&gt;&lt;option value=&quot;library&quot;&gt;Library&lt;/option&gt;&lt;option value=&quot;detail&quot;&gt;Item detail&lt;/option&gt;&lt;option value=&quot;offline&quot;&gt;Offline&lt;/option&gt;&lt;option value=&quot;redirect&quot;&gt;Redirect&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+  &lt;div class=&quot;lc-preview&quot;&gt;&lt;label for=&quot;lc-screen-picker&quot;&gt;Preview screen&lt;/label&gt;&lt;select id=&quot;lc-screen-picker&quot;&gt;&lt;option value=&quot;home&quot;&gt;Home&lt;/option&gt;&lt;option value=&quot;enroll&quot;&gt;Owner enrollment&lt;/option&gt;&lt;option value=&quot;object&quot;&gt;Voice intake ready&lt;/option&gt;&lt;option value=&quot;recording&quot;&gt;Recording&lt;/option&gt;&lt;option value=&quot;photo&quot;&gt;Add photo&lt;/option&gt;&lt;option value=&quot;analyzing&quot;&gt;Analyzing&lt;/option&gt;&lt;option value=&quot;review&quot;&gt;Review&lt;/option&gt;&lt;option value=&quot;edit&quot;&gt;Edit details&lt;/option&gt;&lt;option value=&quot;people&quot;&gt;Identify people&lt;/option&gt;&lt;option value=&quot;experience&quot;&gt;Link experience&lt;/option&gt;&lt;option value=&quot;saved&quot;&gt;Saved&lt;/option&gt;&lt;option value=&quot;library&quot;&gt;Library&lt;/option&gt;&lt;option value=&quot;library-search&quot;&gt;Library voice search&lt;/option&gt;&lt;option value=&quot;search-results&quot;&gt;Search results&lt;/option&gt;&lt;option value=&quot;detail&quot;&gt;Item detail&lt;/option&gt;&lt;option value=&quot;offline&quot;&gt;Offline&lt;/option&gt;&lt;option value=&quot;redirect&quot;&gt;Redirect&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
   &lt;section class=&quot;lc-phone&quot; aria-label=&quot;Logan Catalog mobile app mockup&quot;&gt;
     &lt;header class=&quot;lc-top&quot;&gt;&lt;div class=&quot;lc-brand&quot;&gt;Logan Catalog&lt;/div&gt;&lt;div class=&quot;lc-owner&quot;&gt;Owner · Logan&lt;/div&gt;&lt;/header&gt;
     &lt;main class=&quot;lc-main&quot;&gt;
@@ -1127,7 +1136,17 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;section class=&quot;lc-screen&quot; data-screen=&quot;object&quot; hidden&gt;
         &lt;button class=&quot;lc-back&quot; type=&quot;button&quot; data-go=&quot;home&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Back&lt;/button&gt;
         &lt;h2&gt;Tell me about it&lt;/h2&gt;
-        &lt;p&gt;Speak naturally. You can add a photo now or later.&lt;/p&gt;
+        &lt;p&gt;Nothing is listening yet. Start when you are ready, or add a photo first.&lt;/p&gt;
+        &lt;button class=&quot;lc-mic-ready&quot; type=&quot;button&quot; data-go=&quot;recording&quot; aria-label=&quot;Start talking&quot;&gt;&lt;i data-lucide=&quot;mic&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;div class=&quot;lc-center-note&quot;&gt;Microphone off&lt;/div&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;recording&quot;&gt;&lt;i data-lucide=&quot;mic&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Start talking&lt;/button&gt;
+        &lt;button class=&quot;lc-action lc-secondary&quot; type=&quot;button&quot; data-go=&quot;photo&quot;&gt;&lt;i data-lucide=&quot;camera&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Add a photo&lt;/button&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;recording&quot; hidden&gt;
+        &lt;button class=&quot;lc-back&quot; type=&quot;button&quot; data-go=&quot;object&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Cancel recording&lt;/button&gt;
+        &lt;h2&gt;Listening&lt;/h2&gt;
+        &lt;p&gt;Speak naturally. You can review the transcription before saving.&lt;/p&gt;
         &lt;div class=&quot;lc-wave&quot; aria-label=&quot;Voice recording visualization&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
         &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;review&quot;&gt;&lt;i data-lucide=&quot;square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Finish recording&lt;/button&gt;
         &lt;button class=&quot;lc-action lc-secondary&quot; type=&quot;button&quot; data-go=&quot;photo&quot;&gt;&lt;i data-lucide=&quot;camera&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Add a photo&lt;/button&gt;
@@ -1210,10 +1229,31 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       &lt;section class=&quot;lc-screen&quot; data-screen=&quot;library&quot; hidden&gt;
         &lt;h2&gt;Your library&lt;/h2&gt;
-        &lt;p&gt;Objects, photos, and drafts awaiting review.&lt;/p&gt;
+        &lt;p&gt;Recently saved items appear first. Ask naturally whenever you need something older.&lt;/p&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;library-search&quot;&gt;&lt;i data-lucide=&quot;mic&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Ask your library&lt;/button&gt;
+        &lt;div class=&quot;lc-tabs&quot; role=&quot;tablist&quot; aria-label=&quot;Library view&quot;&gt;&lt;button class=&quot;lc-tab is-active&quot; type=&quot;button&quot;&gt;Recent&lt;/button&gt;&lt;button class=&quot;lc-tab&quot; type=&quot;button&quot;&gt;Objects&lt;/button&gt;&lt;button class=&quot;lc-tab&quot; type=&quot;button&quot;&gt;Photos&lt;/button&gt;&lt;button class=&quot;lc-tab&quot; type=&quot;button&quot;&gt;Drafts&lt;/button&gt;&lt;/div&gt;
         &lt;button class=&quot;lc-library-item&quot; style=&quot;width:100%;text-align:left;color:inherit&quot; type=&quot;button&quot; data-go=&quot;detail&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;fan&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Lasko box fan&lt;/strong&gt;&lt;small&gt;Object · 1 photo&lt;/small&gt;&lt;/div&gt;&lt;/button&gt;
         &lt;div class=&quot;lc-library-item&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;disc-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Back to the Future&lt;/strong&gt;&lt;small&gt;Blu-ray copy · Media Shelf&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;div class=&quot;lc-library-item&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;image&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Lake trip photo&lt;/strong&gt;&lt;small&gt;Jen and Michael · linked experience&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lc-page-note&quot;&gt;&lt;span&gt;Showing 3 of 18 recent items&lt;/span&gt;&lt;button class=&quot;lc-back&quot; type=&quot;button&quot;&gt;Next page&lt;/button&gt;&lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;library-search&quot; hidden&gt;
+        &lt;button class=&quot;lc-back&quot; type=&quot;button&quot; data-go=&quot;library&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Library&lt;/button&gt;
+        &lt;h2&gt;Ask your library&lt;/h2&gt;
+        &lt;p&gt;Nothing is listening yet. Tap the microphone and ask for what you want.&lt;/p&gt;
+        &lt;button class=&quot;lc-mic-ready&quot; type=&quot;button&quot; data-go=&quot;search-results&quot; aria-label=&quot;Start library search&quot;&gt;&lt;i data-lucide=&quot;mic&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;div class=&quot;lc-center-note&quot;&gt;Microphone off&lt;/div&gt;
+        &lt;div class=&quot;lc-note&quot;&gt;Try: “Show me the movies I own with Michael J. Fox.”&lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class=&quot;lc-screen&quot; data-screen=&quot;search-results&quot; hidden&gt;
+        &lt;button class=&quot;lc-back&quot; type=&quot;button&quot; data-go=&quot;library&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Library&lt;/button&gt;
+        &lt;h2&gt;Here’s what I found&lt;/h2&gt;
+        &lt;div class=&quot;lc-query&quot;&gt;&lt;small&gt;You asked&lt;/small&gt;“Show me the movies I own with Michael J. Fox.”&lt;/div&gt;
+        &lt;div class=&quot;lc-library-item&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;disc-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Back to the Future&lt;/strong&gt;&lt;small&gt;Blu-ray copy · Media Shelf&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;lc-library-item&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;disc-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Teen Wolf&lt;/strong&gt;&lt;small&gt;DVD copy · Media Shelf&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;button class=&quot;lc-action lc-primary&quot; style=&quot;margin-top:16px&quot; type=&quot;button&quot; data-go=&quot;library-search&quot;&gt;&lt;i data-lucide=&quot;mic&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Ask another question&lt;/button&gt;
       &lt;/section&gt;
 
       &lt;section class=&quot;lc-screen&quot; data-screen=&quot;detail&quot; hidden&gt;
