@@ -1105,10 +1105,6 @@ html&gt;body{padding:0}&lt;/style&gt;
     #logan-catalog-flow .lc-center-note { text-align:center; font-size:13px; color:light-dark(#69736b,#a4aea6); margin-bottom:26px; }
     #logan-catalog-flow .lc-query { padding:14px; border-radius:14px; background:light-dark(#e8f0e6,#263229); color:light-dark(#285c32,#b7dcbc); line-height:1.4; margin:10px 0 16px; }
     #logan-catalog-flow .lc-query small { display:block; color:light-dark(#59645b,#aab5ac); margin-bottom:4px; }
-    #logan-catalog-flow .lc-tabs { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; padding:4px; border-radius:13px; background:light-dark(#e8ebe7,#232923); margin-bottom:14px; }
-    #logan-catalog-flow .lc-tab { min-height:38px; border:0; border-radius:10px; background:transparent; color:light-dark(#657067,#a7b0a9); font-size:12px; cursor:pointer; }
-    #logan-catalog-flow .lc-tab.is-active { background:light-dark(#ffffff,#343c35); color:light-dark(#285c32,#b9ddbd); box-shadow:0 1px 3px light-dark(#17201918,#00000044); }
-    #logan-catalog-flow .lc-page-note { display:flex; justify-content:space-between; align-items:center; color:light-dark(#69736b,#a4aea6); font-size:12px; padding:5px 2px 0; }
     @media (max-width:360px) { #logan-catalog-flow .lc-phone { border-radius:20px; } #logan-catalog-flow .lc-main { padding-inline:14px; } }
   &lt;/style&gt;
 
@@ -1229,13 +1225,11 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       &lt;section class=&quot;lc-screen&quot; data-screen=&quot;library&quot; hidden&gt;
         &lt;h2&gt;Your library&lt;/h2&gt;
-        &lt;p&gt;Recently saved items appear first. Ask naturally whenever you need something older.&lt;/p&gt;
+        &lt;p&gt;Your 15 most recent additions, newest first.&lt;/p&gt;
         &lt;button class=&quot;lc-action lc-primary&quot; type=&quot;button&quot; data-go=&quot;library-search&quot;&gt;&lt;i data-lucide=&quot;mic&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Ask your library&lt;/button&gt;
-        &lt;div class=&quot;lc-tabs&quot; role=&quot;tablist&quot; aria-label=&quot;Library view&quot;&gt;&lt;button class=&quot;lc-tab is-active&quot; type=&quot;button&quot;&gt;Recent&lt;/button&gt;&lt;button class=&quot;lc-tab&quot; type=&quot;button&quot;&gt;Objects&lt;/button&gt;&lt;button class=&quot;lc-tab&quot; type=&quot;button&quot;&gt;Photos&lt;/button&gt;&lt;button class=&quot;lc-tab&quot; type=&quot;button&quot;&gt;Drafts&lt;/button&gt;&lt;/div&gt;
         &lt;button class=&quot;lc-library-item&quot; style=&quot;width:100%;text-align:left;color:inherit&quot; type=&quot;button&quot; data-go=&quot;detail&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;fan&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Lasko box fan&lt;/strong&gt;&lt;small&gt;Object · 1 photo&lt;/small&gt;&lt;/div&gt;&lt;/button&gt;
         &lt;div class=&quot;lc-library-item&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;disc-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Back to the Future&lt;/strong&gt;&lt;small&gt;Blu-ray copy · Media Shelf&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;div class=&quot;lc-library-item&quot;&gt;&lt;div class=&quot;lc-thumb&quot;&gt;&lt;i data-lucide=&quot;image&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Lake trip photo&lt;/strong&gt;&lt;small&gt;Jen and Michael · linked experience&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
-        &lt;div class=&quot;lc-page-note&quot;&gt;&lt;span&gt;Showing 3 of 18 recent items&lt;/span&gt;&lt;button class=&quot;lc-back&quot; type=&quot;button&quot;&gt;Next page&lt;/button&gt;&lt;/div&gt;
       &lt;/section&gt;
 
       &lt;section class=&quot;lc-screen&quot; data-screen=&quot;library-search&quot; hidden&gt;
