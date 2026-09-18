@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#102b18">
+<title>Wordly · Awesome share cards</title>
+<style>
+:root{font-family:Arial,sans-serif;color:#1b211c;background:#eceee9}*{box-sizing:border-box}body{margin:0;padding:24px 16px 48px}.page{width:min(100%,560px);margin:auto}.eyebrow{margin:0;color:#4f6952;font-size:.72rem;font-weight:800;letter-spacing:.12em}.intro h1{margin:.35rem 0;font-size:1.8rem}.intro p{margin:.4rem 0 1.5rem;color:#607063;line-height:1.45}.cards{display:grid;gap:28px}figure{margin:0}figcaption{margin:0 0 10px;font-size:1rem;font-weight:800}canvas{display:block;width:100%;height:auto;border-radius:2px;box-shadow:0 16px 45px #20312430}.download{display:inline-flex;margin-top:10px;color:#285e31;font-size:.8rem;font-weight:800}.note{margin-top:30px;border-top:1px solid #cfd5cd;padding-top:16px;color:#647066;font-size:.75rem;line-height:1.45}
+</style>
+</head>
+<body>
+<main class="page"><header class="intro"><p class="eyebrow">WORDLY / DESIGN REVIEW</p><h1>Awesome share cards</h1><p>Fictional sample results. Compare a two-guess solve with an unsolved game.</p></header><section class="cards" id="cards"></section><p class="note">Sample data only. This page does not connect to Wordly or contain player information.</p></main>
+<script>
+const colors={correct:'#538d4e',present:'#c2a83e',absent:'#787c7e'};
+const samples=[
+ {title:'Solved in two guesses',number:1917,date:'September 18, 2026',rating:'3.77',status:'won',time:'1:12',guesses:[['CRANE',['absent','absent','present','absent','present']],['THETA',['correct','correct','correct','correct','correct']]]},
+ {title:'Unsolved',number:1917,date:'September 18, 2026',rating:'1.04',status:'lost',time:'4:14',guesses:[['CRANE',['absent','absent','present','absent','present']],['MOIST',['absent','absent','absent','absent','present']],['BULKY',['absent','absent','absent','absent','absent']],['FJORD',['absent','absent','absent','absent','absent']],['WEDGE',['absent','present','absent','absent','absent']],['VAPID',['absent','present','absent','absent','absent']]]}
+];
+function card(data){const size=104,gap=13,startY=250,gridHeight=data.guesses.length*size+(data.guesses.length-1)*gap,statsTop=startY+gridHeight+54,canvas=document.createElement('canvas');canvas.width=1000;canvas.height=statsTop+250;const c=canvas.getContext('2d');const bg=c.createLinearGradient(0,0,1000,canvas.height);bg.addColorStop(0,'#17391f');bg.addColorStop(.58,'#2f6637');bg.addColorStop(1,'#102b18');c.fillStyle=bg;c.fillRect(0,0,1000,canvas.height);c.strokeStyle='#ffffff10';c.lineWidth=2;for(let i=-6;i<15;i++){c.beginPath();c.moveTo(i*110,0);c.lineTo(i*110+650,canvas.height);c.stroke()}c.strokeStyle='#d7ecd555';c.beginPath();c.roundRect(24,24,952,canvas.height-48,32);c.stroke();const label=(text,x,y,fontSize,color='#fff',weight=750)=>{c.fillStyle=color;c.font=`${weight} ${fontSize}px Arial`;c.fillText(text,x,y)};c.textAlign='left';label('WORDLY',62,92,30,'#d8ecd8',800);label(`#${data.number}`,62,178,78);label(data.date,62,218,24,'#c8dfca',500);const gridWidth=size*5+gap*4,startX=1000-62-gridWidth;data.guesses.forEach(([word,marks],row)=>marks.forEach((mark,column)=>{const x=startX+column*(size+gap),y=startY+row*(size+gap);c.fillStyle=colors[mark];c.beginPath();c.roundRect(x,y,size,size,8);c.fill();c.textAlign='center';label(word[column],x+size/2,y+74,52,'#fff',800)}));c.textAlign='left';label(data.rating,62,358,132);c.fillStyle='#ffffff18';c.beginPath();c.roundRect(62,390,370,62,31);c.fill();label(data.status==='won'?'THAT WAS SHARP.':'THE WORD WON.',88,431,23,'#eef7ed',700);c.fillStyle='#fff';c.beginPath();c.roundRect(62,statsTop,876,188,24);c.fill();const last=data.guesses.at(-1)[1],placed=last.filter(mark=>mark==='correct').length,values=[data.status==='won'?String(data.guesses.length-1):String(data.guesses.length),String(data.guesses.length),`${placed}/5`,data.time],captions=['Misses','Guesses','Letters placed','Time played'];c.textAlign='center';values.forEach((value,i)=>{const x=172+i*219;label(value,x,statsTop+78,52,'#244b29',750);label(captions[i],x,statsTop+130,21,'#6f7d70',500);if(i<3){c.strokeStyle='#dfe7df';c.beginPath();c.moveTo(281+i*219,statsTop+38);c.lineTo(281+i*219,statsTop+145);c.stroke()}});return canvas}
+const cards=document.querySelector('#cards');samples.forEach(sample=>{const figure=document.createElement('figure'),caption=document.createElement('figcaption'),canvas=card(sample),link=document.createElement('a');caption.textContent=sample.title;link.className='download';link.textContent='Download sample image';link.download=`wordly-${sample.status}.png`;link.href=canvas.toDataURL('image/png');figure.append(caption,canvas,link);cards.append(figure)});
+</script>
+</body>
+</html>
