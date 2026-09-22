@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Budgeter Weekly Header Proposals</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#080a0c; color:#f5f7f9; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:22px 14px 42px; background:radial-gradient(circle at 50% -5%,#1c2719 0,#080a0c 35%); }
+    .page { width:min(100%,980px); margin:auto; }
+    .intro { margin:0 auto 18px; width:min(100%,430px); }
+    .intro h1 { margin:0; font-size:1.35rem; letter-spacing:-.03em; }
+    .intro p { margin:7px 0 0; color:#929aa6; font-size:.9rem; line-height:1.45; }
+    .proposals { display:grid; gap:22px; align-items:start; }
+    .proposal-label { width:min(100%,430px); margin:0 auto 8px; color:#b7ff5a; font-size:.75rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    .phone { width:min(100%,430px); margin:auto; overflow:hidden; border:1px solid #242a31; border-radius:30px; background:#0b0d10; box-shadow:0 24px 70px rgba(0,0,0,.42); }
+    .screen { min-height:780px; padding:30px 18px 86px; background:radial-gradient(circle at 50% -10%,#1c2719 0,#0b0d10 38%); }
+    .topbar { display:flex; align-items:center; justify-content:space-between; margin-bottom:26px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:760; }
+    .mark { display:grid; place-items:center; width:34px; height:34px; border-radius:11px; background:#b7ff5a; color:#0b0d10; font-weight:900; }
+    .connected { color:#8d96a3; font-size:.78rem; }
+    .connected::before { content:""; display:inline-block; width:7px; height:7px; margin-right:7px; border-radius:50%; background:#b7ff5a; }
+    .dates { display:flex; gap:8px; margin:0 -18px 20px; padding:0 18px 4px; overflow:hidden; }
+    .date { flex:0 0 auto; padding:9px 14px; border:1px solid #282e37; border-radius:999px; background:#12151a; color:#8d96a3; font-size:.92rem; }
+    .date.active { border-color:#f5f7f9; background:#f5f7f9; color:#111; font-weight:750; }
+    .eyebrow { margin:0 0 8px; color:#b7ff5a; font-size:.72rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    .title-row { display:flex; align-items:end; justify-content:space-between; gap:12px; margin-bottom:16px; }
+    h2 { margin:0; font-size:2rem; line-height:1; letter-spacing:-.05em; }
+    .linked { padding:6px 10px; border-radius:999px; background:#243318; color:#b7ff5a; font-size:.72rem; font-weight:760; }
+    .hero { padding:20px; border:1px solid #38551c; border-radius:20px; background:#1d2b0e; }
+    .label { display:block; color:#8d96a3; font-size:.74rem; }
+    .hero-value { display:block; margin-top:7px; color:#b7ff5a; font-size:2.55rem; font-weight:850; letter-spacing:-.055em; }
+    .hero-foot { display:flex; justify-content:space-between; gap:12px; margin-top:14px; padding-top:12px; border-top:1px solid rgba(183,255,90,.16); color:#8d96a3; font-size:.76rem; }
+    .hero-foot strong { color:#f5f7f9; }
+    .strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; margin-top:10px; overflow:hidden; border-radius:17px; background:#282e37; }
+    .cell { min-width:0; padding:14px 11px; background:#12151a; }
+    .cell span { display:block; color:#8d96a3; font-size:.69rem; }
+    .cell strong { display:block; margin-top:7px; overflow:hidden; font-size:1.02rem; letter-spacing:-.03em; text-overflow:ellipsis; }
+    .cell .warn { color:#ffc45d; }
+    .progress { height:7px; margin:14px 0 5px; overflow:hidden; border-radius:999px; background:#27302a; }
+    .progress span { display:block; width:16%; height:100%; background:#b7ff5a; }
+    .section { display:flex; align-items:center; justify-content:space-between; margin:28px 0 12px; }
+    .section h3 { margin:0; font-size:1.18rem; letter-spacing:-.02em; }
+    .section small { color:#8d96a3; }
+    .sample { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; padding:16px; border:1px solid #282e37; border-radius:17px; background:#12151a; }
+    .sample strong,.sample span { display:block; }
+    .sample span { margin-top:5px; color:#8d96a3; font-size:.78rem; }
+    .amount { align-self:center; text-align:right; }
+    .nav { display:grid; grid-template-columns:repeat(5,1fr); margin:30px -18px -86px; padding:8px 8px 22px; border-top:1px solid #282e37; background:#0b0d10; }
+    .nav span { padding:9px 2px; border-radius:12px; color:#8d96a3; font-size:.65rem; font-weight:720; text-align:center; }
+    .nav .active { color:#b7ff5a; background:rgba(183,255,90,.08); }
+    .option-b .hero-value { font-size:2.35rem; }
+    .option-b .hero { margin-bottom:10px; }
+    .option-b .status-line { display:flex; align-items:center; justify-content:space-between; margin-top:12px; color:#8d96a3; font-size:.75rem; }
+    @media (min-width:920px) { .proposals { grid-template-columns:1fr 1fr; } .intro { width:100%; max-width:none; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="intro"><h1>Weekly paycheck header proposals</h1><p>Both stop at Responsibilities; the existing responsibility cards and actions stay exactly as they are.</p></header>
+    <section class="proposals">
+      <div>
+        <p class="proposal-label">A · Outcome first</p>
+        <article class="phone" aria-label="Outcome-first weekly paycheck proposal">
+          <div class="screen">
+            <header class="topbar"><div class="brand"><span class="mark">B</span>Budgeter</div><span class="connected">Connected</span></header>
+            <nav class="dates"><span class="date active">Sep 18, 2026</span><span class="date">Oct 2, 2026</span><span class="date">Oct 16, 2026</span></nav>
+            <p class="eyebrow">This paycheck</p>
+            <div class="title-row"><h2>Sep 18, 2026</h2><span class="linked">Linked</span></div>
+            <section class="hero"><span class="label">After remaining responsibilities</span><strong class="hero-value">$2,740.90</strong><div class="hero-foot"><span>Balance now <strong>$6,127.90</strong></span><span>Change <strong>−$3,387.00</strong></span></div></section>
+            <section class="strip"><div class="cell"><span>Received</span><strong>$6,427.97</strong></div><div class="cell"><span>Responsibilities</span><strong>$4,036.89</strong></div><div class="cell"><span>Left to pay</span><strong class="warn">$3,387.00</strong></div></section>
+            <div class="section"><h3>Responsibilities</h3><small>7 assigned</small></div>
+            <div class="sample"><div><strong>Water</strong><span>Due Sep 20 · $49.89 paid</span></div><strong class="amount">$49.89</strong></div>
+            <nav class="nav"><span>◉<br>Overview</span><span class="active">$<br>Paychecks</span><span>▦<br>Monthly</span><span>↕<br>Transactions</span><span>⚙<br>Setup</span></nav>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="proposal-label">B · Paycheck progress</p>
+        <article class="phone option-b" aria-label="Progress-first weekly paycheck proposal">
+          <div class="screen">
+            <header class="topbar"><div class="brand"><span class="mark">B</span>Budgeter</div><span class="connected">Connected</span></header>
+            <nav class="dates"><span class="date active">Sep 18, 2026</span><span class="date">Oct 2, 2026</span><span class="date">Oct 16, 2026</span></nav>
+            <p class="eyebrow">This paycheck</p>
+            <div class="title-row"><h2>Sep 18, 2026</h2><span class="linked">Linked</span></div>
+            <section class="hero"><span class="label">Received</span><strong class="hero-value">$6,427.97</strong><div class="hero-foot"><span>Balance now <strong>$6,127.90</strong></span><span>Month-end <strong>$5,291.90</strong></span></div></section>
+            <section class="strip"><div class="cell"><span>Bill plan</span><strong>$4,037.00</strong></div><div class="cell"><span>Paid actual</span><strong>$649.89</strong></div><div class="cell"><span>Left to pay</span><strong class="warn">$3,387.00</strong></div></section>
+            <div class="progress" aria-label="16 percent of responsibilities paid"><span></span></div>
+            <div class="status-line"><span>$649.89 paid</span><span>$2,740.90 after bills</span></div>
+            <div class="section"><h3>Responsibilities</h3><small>7 assigned</small></div>
+            <div class="sample"><div><strong>Water</strong><span>Due Sep 20 · $49.89 paid</span></div><strong class="amount">$49.89</strong></div>
+            <nav class="nav"><span>◉<br>Overview</span><span class="active">$<br>Paychecks</span><span>▦<br>Monthly</span><span>↕<br>Transactions</span><span>⚙<br>Setup</span></nav>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
